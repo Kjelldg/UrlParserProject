@@ -1,0 +1,23 @@
+Assignment:
+
+Write a small parser for URL:s. The parser should return parsed values similar to ‘java.net.URL’ (but should not use it):
+url = 'http://username:password@hostname/path?arg=value#anchor';
+Should give:
+Map
+(
+[scheme] => http
+[host] => hostname
+[user] => username
+[pass] => password
+[path] => /path
+[query] => arg=value
+[fragment] => anchor
+)
+Also write a parser for the [query] part, returning an array with the different values (not using the corresponding built-in function):
+query = "key1=value1&key2=value2";
+Should give:
+Map
+(
+[key1] => value1
+[key2] => value2
+)
